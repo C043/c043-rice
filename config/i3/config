@@ -160,9 +160,13 @@ bindsym $mod+Shift+l exec "i3lock"
 bindsym $mod+b exec "vivaldi"
 
 exec --no-startup-id "polybar"
-exec --no-startup-id "setxkbmap -option caps:escape"
-exec --no-startup-id "feh --bg-scale $HOME/Downloads/Ttm.jpg"
+exec --no-startup-id "setxkbmap -layout it,it -option caps:escape"
+exec --no-startup-id "feh --bg-scale $HOME/.config/i3/wallpaper/i3Wallpaper.jpeg"
+exec --no-startup-id "picom --config $HOME/.config/picom/picon.conf"
 exec --no-startup-id "picom"
+exec --no-startup-id "autorandr docked"
+
+default_border pixel 0
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -190,5 +194,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-
